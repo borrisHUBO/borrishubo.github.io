@@ -1,0 +1,5 @@
+# working files kept on disk, not part of the public site
+assets/_*
+assets/logos_src/
+assets/figures_src/
+style_v1_before_yann_spacing.css

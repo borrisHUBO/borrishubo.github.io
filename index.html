@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mark Borris Aldonza</title>
+  <meta name="description" content="Mark Borris Aldonza. Visiting researcher at KAIST, PhD candidate at Seoul National University.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.4/css/academicons.min.css">
+  <link rel="stylesheet" href="style.css?v=5">
+</head>
+<body>
+
+<header class="masthead">
+  <nav>
+    <a class="site-name" href="index.html">Mark Borris Aldonza</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+  </nav>
+</header>
+
+<div class="page">
+
+  <aside class="sidebar">
+    <img src="assets/photo.jpg" alt="Mark Borris Aldonza">
+    <h1>Mark Borris Aldonza</h1>
+    <p class="role">Visiting researcher at KAIST<br>PhD candidate, Seoul National University</p>
+    <ul>
+      <li><i class="fa-solid fa-location-dot"></i>Daejeon, South Korea</li>
+      <li><a href="mailto:borris@snu.ac.kr"><i class="fa-solid fa-envelope"></i>Email</a></li>
+      <li><a href="https://twitter.com/PrecursorCell"><i class="fa-brands fa-twitter"></i>Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/markborris/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
+      <li><a href="https://scholar.google.co.kr/citations?user=kB8qjwgAAAAJ&hl=en"><i class="ai ai-google-scholar"></i>Google Scholar</a></li>
+      <li><a href="https://pubmed.ncbi.nlm.nih.gov/?term=aldonza&sort=date"><i class="ai ai-pubmed"></i>PubMed</a></li>
+      <li><a href="https://github.com/borrisHUBO"><i class="fa-brands fa-github"></i>GitHub</a></li>
+      <li><a href="https://bsky.app/profile/precursorcell.bsky.social"><i class="fa-brands fa-bluesky"></i>Bluesky</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <p>I work with <a href="https://hyang881.wixsite.com/yanglab">Hanseul Yang</a> at KAIST on problems that sit between evolution and medicine.</p>
+
+    <p>I study how traits evolve across animal genomes, especially where distant species have independently arrived at the same solution, and I use systems biology and model organisms to work out which of these can be carried over to humans. My current focus is the evolutionary origin of complex regeneration. A few animals, including the spiny mouse (<em>Acomys</em>), can rebuild tissue that most mammals only scar. I am tracing how that ability arose, and using <em>Acomys</em> and other regenerative species to study how it works.</p>
+
+    <p>I am completing my PhD at Seoul National University, funded by the <a href="https://www.hyundai-cmkfoundation.org/en/com/plHr">Hyundai Motor Chung Mong-Koo Foundation</a> and previously supported by the Global Korea Scholarship (GKS) of NIIED. I welcome conversations with biotech and pharmaceutical teams working on related problems, and email is the best way to reach me.</p>
+
+    <h2>Featured research</h2>
+    <div class="tiles">
+      <a class="tile" href="https://doi.org/10.1126/sciadv.ade3399" data-full="assets/research-1_full.jpg">
+        <div class="plate"><img src="assets/research-1.jpg" alt="Dog epigenome"></div>
+        <div class="t">Dog epigenome</div>
+        <div class="m">Science Advances · 2023</div>
+      </a>
+      <a class="tile" href="https://doi.org/10.7554/eLife.75191" data-full="assets/research-2_full.jpg?v=2">
+        <div class="plate"><img src="assets/research-2.jpg?v=2" alt="Glycosylation in cancer"></div>
+        <div class="t">Glycosylation in cancer</div>
+        <div class="m">eLife · 2023</div>
+      </a>
+      <a class="tile" href="https://doi.org/10.1126/sciadv.aav7416" data-full="assets/research-3_full.jpg">
+        <div class="plate"><img src="assets/research-3.jpg" alt="Drug resistance in cancer"></div>
+        <div class="t">Drug resistance in cancer</div>
+        <div class="m">Science Advances · 2020</div>
+      </a>
+      <a class="tile" href="https://doi.org/10.1038/s41598-021-87599-9" data-full="assets/research-4_full.jpg">
+        <div class="plate"><img src="assets/research-4.jpg" alt="Chemical biology"></div>
+        <div class="t">Chemical biology</div>
+        <div class="m">Scientific Reports · 2021</div>
+      </a>
+    </div>
+  </main>
+
+</div>
+
+<footer>
+  <div>&copy; 2026 Mark Borris Aldonza</div>
+</footer>
+
+<div class="zoom" id="zoom"><img alt=""><div class="cap"><span></span><a href="#" target="_blank" rel="noopener">Read the paper</a></div></div>
+<script>
+  // Clicking a research tile shows the whole figure; the caption links to the paper.
+  var z = document.getElementById('zoom');
+  document.querySelectorAll('.tile[data-full]').forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      z.querySelector('img').src = t.dataset.full;
+      z.querySelector('span').textContent = t.querySelector('.t').textContent;
+      z.querySelector('a').href = t.href;
+      z.classList.add('open');
+    });
+  });
+  z.addEventListener('click', function (e) { if (e.target.tagName !== 'A') z.classList.remove('open'); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') z.classList.remove('open'); });
+</script>
+
+</body>
+</html>
