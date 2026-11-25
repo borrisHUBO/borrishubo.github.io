@@ -4,6 +4,7 @@
   --line: #f2f3f3;
   --edge: #cccfd1;
   --accent: #1d6b5f;
+  --blue: #2f6db0;
   --bg: #ffffff;
   --foot: #f2f3f3;
 }
@@ -194,6 +195,11 @@ a:hover { text-decoration: underline; }
 .pubs .meta, .pubs .tldr { margin-top: 3px; }
 .pubs .tags { margin-top: 5px; line-height: 1; }
 .tag { display: inline-block; margin: 0 4px 4px 0; padding: 2px 4px; border-radius: 4px; background: #ccc; color: #fff; font-size: 0.375rem; font-weight: 700; line-height: 1.5; text-transform: uppercase; }
+.pubs .rec { margin-top: 1px; line-height: 1; }
+.rec-label, .chip { font-size: 0.375rem; font-weight: 700; line-height: 1.5; text-transform: uppercase; color: var(--blue); }
+.rec-label { display: inline-block; margin: 0 6px 4px 0; padding: 2px 0; letter-spacing: 0.04em; }
+.chip { display: inline-block; margin: 0 4px 4px 0; padding: 1px 4px; border: 1px solid var(--blue); border-radius: 4px; }
+a.chip:hover { background: var(--blue); color: #fff; text-decoration: none; }
 
 /* footer */
 footer {
